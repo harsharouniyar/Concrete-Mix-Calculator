@@ -13,10 +13,6 @@ def concrete_mix_calculator(volume, cement_ratio, sand_ratio, aggregate_ratio, w
 
     water = wc_ratio * cement_weight
 
-    print("Cement Bags:", round(cement_bags,2))
-    print("Sand Volume:", round(sand,2),"m3")
-    print("Aggregate Volume:", round(aggregate,2),"m3")
-    print("Water Required:", round(water,2),"liters")
+    strength = (cement_weight / water) * 10
 
-volume = float(input("Enter concrete volume (m3): "))
-concrete_mix_calculator(volume,1,2,3,0.5)
+    return cement_bags, sand, aggregate, water, strength
